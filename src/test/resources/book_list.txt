@@ -1,0 +1,6 @@
+# Title ; Published ; Authors
+The Pragmatic Programmer;1999-10-30;Andy Hunt,David Thomas
+Artificial Intelligence: A Modern Approach;1995-02-01;Stuard J. Russell,Peter Norvig
+Domain Driven Design;2003-08-22;Eric Evans
+Rust in Action;2021-08-10;Tim McNamara
+Clean Code;2008-08-01;Robert C. Martin
