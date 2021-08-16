@@ -1,0 +1,4 @@
+
+1. implement FileBookRepository, and write a unit test to verify that it can load the books from
+   book_list.txt
+
