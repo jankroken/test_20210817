@@ -6,5 +6,5 @@ import java.util.List;
 public class Book {
     private String title;
     private List<Author> authors;
-    LocalDate published;
+    private LocalDate published;
 }
