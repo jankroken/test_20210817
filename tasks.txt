@@ -2,3 +2,14 @@
 1. implement FileBookRepository, and write a unit test to verify that it can load the books from
    book_list.txt
 
+2. Implement the methods in BookController. The calls should return json (which is the default)
+
+3. Imagine that the file actually have millions of books. Change the implementation of FileBookRepository
+   so that it caches the result. Also change the application so that it's fast to look up authors or
+   to look up books by author.
+
+4. imagine the book_list.txt data are in an SQL database table instead of book_list.txt. Open a
+   text file and write down the create statements for tables to represent the data. Then write
+   down the 3 SQL's that would perform the same functionality as the 3 rest methods (so one
+   SQL query to list all books, one to list all unique authors, and one to select all the books
+   by one author)
