@@ -12,4 +12,4 @@
    text file and write down the create statements for tables to represent the data. Then write
    down the 3 SQL's that would perform the same functionality as the 3 rest methods (so one
    SQL query to list all books, one to list all unique authors, and one to select all the books
-   by one author)
+    by one author)
