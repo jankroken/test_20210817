@@ -17,6 +17,7 @@ import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE;
 public class FileBookRepository implements BookRepository {
 
     private InputStream input;
+    private List<Book> books;
 
     public FileBookRepository(InputStream input) {
         this.input = input;
@@ -25,10 +26,13 @@ public class FileBookRepository implements BookRepository {
     @Override
     public List<Book> getBooks() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(input))) {
-            return reader.lines()
-                    .filter(s -> s.charAt(0) != '#')
-                    .map(FileBookRepository::parseBook)
-                    .collect(Collectors.toList());
+            if (books == null) {
+                books = reader.lines()
+                        .filter(s -> s.charAt(0) != '#')
+                        .map(FileBookRepository::parseBook)
+                        .collect(Collectors.toList());
+            }
+            return books;
         } catch (IOException ioException) {
             throw new RuntimeException(ioException);
         }
