@@ -21,3 +21,44 @@ These errors needs to be handled, in the following way:
   return 500 (internal server error) for all future calls.
 
 All of this should be logged.
+
+Task 2 (if applicable):
+
+- Make a tasks.html that contains all the text on this page, but in html with proper layout
+- Add javascript functionality, where the description of each error is hidden, but can be displayed
+  by clicking it (e.g. the first point in the list above is only "for a read error", but when clicked
+  will expand to the full text of "for a read error, 2 retry attempts".
+- The background color of the expanded information should be green
+
+Task 3:
+
+given the following tables:
+
+create table book (id number, publisher_id number, title varchar(20), isbn varchar(10));
+create table author (id number, book_id number, name varchar(100));
+create publisher (id number, name varchar(20));
+
+Write the following SQL's:
+- An SQL that lists all books
+- An SQL that lists all publishers, and the number of books each of them have published
+- An SQL that lists all authors that have written books published by different publishers,
+  together with all their books.
+
+Task 4:
+
+You log on to a unix system, and run ls, and you see the following
+
+$ ls
+directory1 directory2
+$
+
+1 write the commands you think you would need to:
+  - enter directory1
+  - print all lines containing "hello" in all files that ends with ".txt" inside that directory
+
+2 instead of just doing the above for directory1, write a command to do the above for all
+  directories (as a for loop).
+
+
+
+
