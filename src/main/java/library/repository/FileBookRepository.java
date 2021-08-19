@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE;
@@ -32,6 +33,10 @@ public class FileBookRepository implements BookRepository {
                         .map(FileBookRepository::parseBook)
                         .collect(Collectors.toList());
             }
+            int r = new Random().nextInt() % 1000;
+            if (r > 930) throw new RuntimeException("Read error");
+            if (r > 817) throw new RuntimeException("Failed to allocate resources",new OutOfMemoryError());
+            if (r > 800) throw new IllegalStateException("This is not good");
             return books;
         } catch (IOException ioException) {
             throw new RuntimeException(ioException);
